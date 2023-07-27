@@ -7,14 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-  <ScrollView
+  <FrameLayout
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:background="#EEF8E3"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
+      android:layout_height="match_parent">
+
+    <!-- ImageView como fondo -->
+    <ImageView
+        android:id="@+id/image_view_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/sv"
+        android:scaleType="centerCrop" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,48 +25,54 @@
         android:padding="16dp"
         tools:context=".MainActivity">
 
-      <ImageView
-          android:id="@+id/image_view"
-          android:layout_width="match_parent"
-          android:layout_height="160dp"
-          android:layout_alignParentStart="true"
-          android:layout_alignParentTop="true"
-          android:layout_marginStart="22dp"
-          android:layout_marginTop="29dp"
-          android:src="@drawable/holidays" />
-
-      <Button
-          android:id="@+id/button_get_holidays"
-          android:layout_width="184dp"
-          android:layout_height="67dp"
-          android:layout_below="@id/image_view"
-          android:layout_alignParentStart="true"
-          android:layout_alignParentEnd="true"
-          android:layout_marginStart="119dp"
-          android:layout_marginTop="24dp"
-          android:layout_marginEnd="124dp"
-          android:backgroundTint="#86C142"
-          android:text="Obtener Holidays" />
-
+      <!-- Título -->
       <TextView
-          android:id="@+id/text_view_holidays"
-          android:layout_width="379dp"
+          android:id="@+id/text_view_title"
+          android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_below="@id/button_get_holidays"
-          android:layout_marginTop="26dp"
-          android:backgroundTint="#E7FAF8"
+          android:text="Título"
+          android:textSize="24sp"
           android:textColor="@android:color/black"
-          android:textSize="18sp" />
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="24dp" />
+
+      <!-- ComboBox -->
       <Spinner
           android:id="@+id/spinner_options"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_below="@id/text_view_holidays"
+          android:layout_below="@id/text_view_title"
           android:layout_centerHorizontal="true"
           android:layout_marginTop="16dp" />
 
-    </RelativeLayout>
+      <!-- Botón -->
+      <Button
+          android:id="@+id/button_get_holidays"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Obtener Holidays"
+          android:backgroundTint="#86C142"
+          android:layout_below="@id/spinner_options"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="16dp" />
 
-  </ScrollView>
+      <!-- Resultado (Texto) -->
+      <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/button_get_holidays"
+          android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/text_view_holidays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true" />
+
+      </ScrollView>
+    </RelativeLayout>
+  </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
