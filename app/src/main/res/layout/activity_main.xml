@@ -30,11 +30,11 @@
           android:id="@+id/text_view_title"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="Título"
-          android:textSize="24sp"
-          android:textColor="@android:color/black"
           android:layout_centerHorizontal="true"
-          android:layout_marginTop="24dp" />
+          android:layout_marginTop="24dp"
+          android:text="Festividades de los Paises"
+          android:textColor="@android:color/black"
+          android:textSize="24sp" />
 
       <!-- ComboBox -->
       <Spinner
@@ -50,11 +50,11 @@
           android:id="@+id/button_get_holidays"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="Obtener Holidays"
-          android:backgroundTint="#86C142"
           android:layout_below="@id/spinner_options"
           android:layout_centerHorizontal="true"
-          android:layout_marginTop="16dp" />
+          android:layout_marginTop="16dp"
+          android:backgroundTint="#86C142"
+          android:text="Actualizar" />
 
       <!-- Resultado (Texto) -->
       <ScrollView
