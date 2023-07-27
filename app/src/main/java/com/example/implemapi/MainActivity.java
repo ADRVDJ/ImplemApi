@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Hacer solicitud API
-                Call<HolidayResponse> call = holidayApiService.getHolidays("US", 2022, API_KEY);
+                Call<HolidayResponse> call = holidayApiService.getHolidays("EC", 2022, API_KEY);
                 call.enqueue(new Callback<HolidayResponse>() {
                     @Override
                     public void onResponse(Call<HolidayResponse> call, Response<HolidayResponse> response) {

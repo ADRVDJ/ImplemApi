@@ -54,6 +54,13 @@
           android:backgroundTint="#E7FAF8"
           android:textColor="@android:color/black"
           android:textSize="18sp" />
+      <Spinner
+          android:id="@+id/spinner_options"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/text_view_holidays"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="16dp" />
 
     </RelativeLayout>
 
