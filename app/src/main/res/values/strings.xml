@@ -1,3 +1,11 @@
-<resources>
-    <string name="app_name">ImplemApi</string>
-</resources>
+ <resources>
+        <string name="app_name">ImplemApi</string>
+
+        <string-array name="options">
+            <item>Ecuador</item>
+            <item>Colombia</item>
+            <item>Peru</item>
+            <!-- Agrega más opciones aquí -->
+        </string-array>
+    </resources>
+
