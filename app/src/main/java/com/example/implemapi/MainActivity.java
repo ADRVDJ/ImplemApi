@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<HolidayResponse> call, Throwable t) {
                         Log.e(TAG, "Ocurrio un error: " + t.getMessage());
+                        System.out.print("holaaaa ");
                     }
                 });
             }
